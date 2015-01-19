@@ -1,0 +1,17 @@
+﻿This repository holds a Qt project and all source code and resource files for
+Simple3D, a 3D model viewer with picking and packing capabilities. The code
+requires at least Qt 5.4 with C++11 capabilities enabled and the Boost library.
+
+Simple3D is a 3D model viewer capable of loading multiple STL files, both
+binary and ascii, with tens of millions of triangles. In addition to 3D 
+rotation and zooming of the whole scene, it offers interactive picking and 
+removal of one or more individual models. Endowed with a packing strategy, it 
+can efficiently arrange disparate 3D models on a predefined area while 
+maintaining a specified minimal gap between the models. The total volume and 
+triangle count of the selected and all models is continuously reported at all 
+times.
+
+Simple3D is implemented using the Qt's QOpenGL* classes with all 3D 
+transformations performed on the GPU. Model picking is implemented by 
+off-screen rendering to a frame buffer (QOpenGLFramebufferObject) where each 
+model is painted with different color.
